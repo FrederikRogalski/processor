@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+import sys
+import os
+
+name = sys.argv[-1]
+if name[-2:] == ".v":
+    name = name[:-2]
+os.system(
+    f"verilator --cc --exe --build -I/opt/homebrew/include -LDFLAGS -lgtest test_{name}.cpp {name}.v", )
+os.system(f"./obj_dir/V{name}")
