@@ -2,7 +2,7 @@ module program_counter (
   input clk,
   input abs,
   input rel,
-  input [15:0]alu,
+  input [15:0] alu,
   output [15:0] next,
   output reg [15:0] pc
 );

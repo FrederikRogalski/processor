@@ -1,6 +1,5 @@
 module branch (
   input C, N, Z,
-  input clk,
   input [2:0] ctrl,
   output jmp
 );
