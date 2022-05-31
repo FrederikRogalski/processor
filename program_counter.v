@@ -8,6 +8,6 @@ module program_counter (
 );
 assign next = pc + 1;
   always @(negedge(clk)) begin
-    pc <= abs ? alu : (rel ? alu+pc : next);
+    pc <= abs ? alu : (rel ? alu+next : next);
   end
 endmodule

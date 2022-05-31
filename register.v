@@ -18,4 +18,8 @@ module register (
     end
   end
 
+  always @(negedge(clk)) begin
+    $display("%4d %4d %4d %4d %4d %4d %4d %4d %4d %4d", registers[0], registers[1], registers[2], registers[3], registers[4], registers[5], registers[6], registers[7], registers[8], registers[9]);
+  end
+
 endmodule

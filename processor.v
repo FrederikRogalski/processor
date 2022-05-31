@@ -27,6 +27,9 @@ module processor (
   // program_counter wires
   wire [15:0] next;
   wire [15:0] pc;
+  always @(pc) begin
+    $display("Program counter: %d", pc);
+  end
 
   // rom wires
   wire [15:0] instr;
@@ -75,6 +78,9 @@ module processor (
   wire Co;
   wire No;
   wire Zo;
+  always @(Co or No or Zo) begin
+    $display("Co: %d, No: %d, Zo: %d", Co, No, Zo);
+  end
 
   // branch wires
   wire jmp;

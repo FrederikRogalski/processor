@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import sys
 import os
+import asm
 
 name = sys.argv[-1]
 if name[-2:] == ".v":

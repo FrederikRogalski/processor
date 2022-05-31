@@ -8,13 +8,14 @@ TEST(VprocessorTest, HandlesCycles)
   // TODO for loop 10
   top->clk = 0;
   top->eval();
+  printf("Y = %d\n", top->Y);
   while (!Verilated::gotFinish())
   {
     top->clk = ~top->clk;
     top->eval();
     if (top->clk)
       continue;
-    printf("%d\n", top->Y);
+    printf("Y = %d\n", top->Y);
   }
 
   delete top;

@@ -24,10 +24,6 @@ reg [25:0] control_bits;
 
 assign control_bits = op_code[7] ? 0 : memory[op_code[6:0]];
 
-always @(control_bits) begin
-  $display("Current control bits: %b", control_bits);
-end
-
 always @(op_code) begin
   $display("Current op-code: %b", op_code);
 end
